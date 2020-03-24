@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Menu Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li class="logo">Web Design</li>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Contact</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#">About</a></li>
+            <li class="item"><a href="#">Feedback</a></li>
+            <li class="btn"><a href="#"><i class="fa fa-bars"></i></a></li>
+        </ul>
+    </nav>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.btn').click(function(){
+                $('.item').toggleClass("show");
+                $('ul li').toggleClass("hide");
+                $('.logo').toggleClass("s");
+            });
+        });
+    </script>
+
+</body>
+</html>
