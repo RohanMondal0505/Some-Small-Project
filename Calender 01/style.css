@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background: #dfe6ec;
+    display: flex;
+
+}
+.calender
+{
+    width:600px;
+    height: 482px;
+    background: #fff;
+    margin: auto;
+    box-shadow: 0 0 15px 3px rgba(0,0,0,0.2);
+}
+.month{
+    width: 100%;
+    background: #2ecc71;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 40px 30px;
+}
+#month{
+    font-size: 30px;
+    font-weight: 500;
+}
+.prev, .next{
+    
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    transition: all 0.4s;
+}
+.prev:hover, .next:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+.weekends{
+    display: flex;
+    background: #27ae67;
+    padding: 7px 0;
+    color: #fff;
+}
+.weekends div, .days div{
+    width: 14.28%;
+    text-align: center;
+}
+.days{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+.days div{
+    margin-bottom: 10px;
+    padding: 10px 0;
+    font-weight: 400;
+    transform: all 0.4s;
+    color: #000000;
+}
+.days .perv-date{
+    color: #999;
+}
+.days div:hover{
+    background: #dfe6e9;
+    cursor: pointer;
+}
+.today{
+    background: #27ae67;
+    color: #fff;
+    transition: all 0.4s;
+}

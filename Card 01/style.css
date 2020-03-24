@@ -1,0 +1,135 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #c4b8b8;
+}
+
+.text {
+    height: 100px;
+    width: 30%;
+    position: relative;
+    left: calc(50% - 15%);
+    top: 70px;
+    box-shadow: 0px 0 8px gray;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(0deg, red, yellow);
+    font-family: sans-serif;
+    font-weight: 900;
+}
+
+.contaner {
+    width: 400px;
+    height: 450px;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+
+.con-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    box-shadow: 0px 0px 15px black;
+    border-radius: 8px;
+}
+
+.con-inner:hover {
+    transition: all 1.2s ease;
+    transform: rotateY(180deg);
+}
+
+.front-box,
+.back-box,
+img {
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    border-radius: 8px;
+
+}
+
+.back-box {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: rgb(55, 222, 228);
+}
+
+.back-box .header {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    top: 0;
+}
+
+.header img {
+    border-radius: 8px 8px 0px 0px;
+}
+
+.back-box .footer {
+    width: 100%;
+    height: 150px;
+    border-top: 6px solid rgb(230, 81, 81);
+    position: absolute;
+    top: 300px;
+    border-radius: 0 0 8px 8px;
+    background-color: rgb(55, 222, 228);
+    ;
+}
+
+.footer {
+    padding: 20px;
+}
+
+.footer .fa,
+p {
+    color: rgb(8, 1, 1);
+}
+.fa:hover{
+    transition: 0.8s;
+    transform: rotateY(360deg);
+}
+
+.footer #star .fa {
+    position: relative;
+    color: goldenrod;
+
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    padding-left: 15px;
+}
+
+.btn button {
+    border: none;
+    background-color: chocolate;
+    width: 45%;
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 28px;
+    margin-right: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .8s;
+}
+
+button:hover {
+    background-color: rgb(22, 22, 31);
+}
