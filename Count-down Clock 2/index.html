@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count-down Clock</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Brand Name</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <img src="curve.png" class="wave" alt="">
+        <div class="contentBx">
+            <h2>Coming Soon</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo minus debitis optio accusamus labore,
+                obcaecati explicabo maiores culpa nam quaerat eveniet, voluptates accusantium aliquid molestias laborum
+                itaque provident. Ipsa, incidunt?</p>
+            <div class="countdown">
+                <div class="time">
+                    <div id="day">236</div><span>Day</span>
+                </div>
+                <div class="time">
+                    <div id="hour">1</div><span>Minutes</span>
+                </div>
+                <div class="time">
+                    <div id="minute">50</div><span>Hours</span>
+                </div>
+                <div class="time">
+                    <div id="second">14</div><span>Seconds</span>
+                </div>
+            </div>
+            <a href="#" onclick="toggle();">Notify Me!</a>
+        </div>
+        <div class="imgBx">
+            <img src="man.png" alt="image">
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+    <div class="newsletter">
+        <h2>Stay Tuned</h2>
+        <p>Get notified at launch</p>
+        <div class="inputBx">
+            <form action="">
+                <input type="email" name="email" id="email" placeholder="Enter Email Address">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <img src="close.png" onclick="toggle();" class="close" alt="">
+    </div>
+    <script>
+        function toggle() {
+            var newsletter = document.querySelector('.newsletter');
+            newsletter.classList.toggle('active');
+        }
+
+
+
+
+        var countDate = new Date('Jan 1, 2021 00:00:00').getTime();
+
+        function newYear() {
+            var now = new Date().getTime();
+            gap = countDate - now;
+
+            var second = 1000;
+            var minute = second * 60;
+            var hour = minute * 60;
+            var day = hour * 24;
+
+            var d = Math.floor(gap / (day));
+            var h = Math.floor((gap % (day)) / (hour));
+            var m = Math.floor((gap % (hour)) / (minute));
+            var s = Math.floor((gap % (minute)) / second);
+
+            document.getElementById('day').innerHTML = d;
+            document.getElementById('hour').innerHTML = h;
+            document.getElementById('minute').innerHTML = m;
+            document.getElementById('second').innerHTML = s;
+        }
+        setInterval(function () {
+            newYear();
+        }, 1000)
+    </script>
+</body>
+
+</html>
